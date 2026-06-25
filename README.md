@@ -1,32 +1,40 @@
 # Suit Activation System
 
-An Arduino-based superhero suit activation prop built as an introduction to embedded systems.
+An Arduino-based superhero suit activation prop built as an introduction to 
+embedded systems development.
 
-## Demo
-Press the button to trigger a sequential LED power-up sequence, musical jingle, and LCD status display.
+## What It Does
 
-## Features
-- Button-triggered activation sequence
-- 4 sequential LEDs powering up with ascending musical notes
-- LCD display showing suit status (STANDBY / INITIALIZING / SUIT ONLINE)
-- Passive buzzer jingle using PWM tone generation
+On button press, four LEDs light up sequentially alongside an ascending jingle 
+played through a buzzer, simulating suit systems coming online. The LCD reads 
+"INITIALIZING..." during the sequence, then switches to "SUIT ONLINE / POWER: 100%" 
+once complete. After a short delay the system returns to "SUIT SYSTEM / STANDBY..." 
+and waits for the next activation.
+
+## What I Learned
+
+This was my first hands-on project with the Arduino Uno. Getting all components 
+working on their own pins simultaneously was the core challenge, coordinating the 
+LEDs, buzzer, button input, and LCD without conflicts required careful pin mapping 
+and debugging. Key concepts I worked through:
+
+- Digital input and output
+- PWM tone generation
+- Parallel LCD communication (16-pin interface)
+- Hardware debugging and wiring diagnosis
 
 ## Components
-- ELEGOO UNO R3 (Arduino compatible)
-- LCD1602 16x2 display (parallel interface)
+
+- ELEGOO UNO R3
+- LCD1602 16x2 display
 - 4x LEDs with 220 ohm resistors
 - Passive buzzer
 - Tactile push button
-- Potentiometer (LCD contrast control)
+- Potentiometer for LCD contrast
 - Breadboard and jumper wires
 
-## Concepts Demonstrated
-- Digital input and output
-- PWM tone generation
-- Parallel LCD communication
-- Hardware debugging and pin mapping
+## Roadmap
 
-## Next Steps
-- Add potentiometer voltage sensing with ADC
-- Add DHT11 temperature sensor for live HUD stats
-- Add conditional activation based on power level threshold
+- Live power level reading via potentiometer and ADC
+- DHT11 temperature sensor for suit diagnostics HUD
+- Conditional activation based on minimum power threshold
