@@ -3,6 +3,11 @@
 An Arduino-based superhero suit activation prop built as an introduction to 
 embedded systems development.
 
+## Demo
+
+
+https://github.com/nlowe56/suit-activation-system/blob/main/Suit Activation System.mp4
+
 ## What It Does
 
 On button press, four LEDs light up sequentially alongside an ascending jingle 
